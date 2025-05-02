@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moongiro - Seu Emagrecimento Natural e Saudável</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #4ade80 0%, #3b82f6 100%);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .sticky-bar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            transition: all 0.3s ease;
+        }
+        .before-after-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .before-after-card::before {
+            content: 'ANTES';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .before-after-card::after {
+            content: 'DEPOIS';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(74, 222, 128, 0.9);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .guarantee-badge {
+            position: relative;
+            overflow: hidden;
+        }
+        .guarantee-badge::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(transparent, #f59e0b, transparent 30%);
+            animation: rotate 4s linear infinite;
+        }
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Sticky Promo Bar -->
+    <div class="sticky-bar bg-yellow-400 text-black py-2 px-4 text-center font-bold">
+        <div class="container mx-auto flex justify-between items-center">
+            <span class="text-sm md:text-base">🔥 OFERTA ESPECIAL: Compre agora e ganhe 30% de desconto + Frete Grátis!</span>
+            <div class="hidden md:flex items-center space-x-2">
+                <span id="countdown" class="bg-red-600 text-white px-2 py-1 rounded-md"></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Moongiro</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">O Segredo para Emagrecer de Forma Natural e Saudável</h2>
+                <p class="text-lg mb-8">Descubra como perder até 12kg em 30 dias sem dietas malucas ou exercícios exaustivos. Resultados comprovados por mais de 15.000 clientes satisfeitos!</p>
+                
+                <div class="bg-white rounded-lg p-6 text-black max-w-md">
+                    <h3 class="text-xl font-bold mb-4 text-center">OFERTA LIMITADA</h3>
+                    <div class="flex justify-between items-center mb-4">
+                        <span class="text-gray-600 line-through text-lg">De €150,00</span>
+                        <span class="bg-green-500 text-white px-3 py-1 rounded-full font-bold">33% OFF</span>
+                    </div>
+                    <div class="text-3xl font-bold text-green-600 mb-4">€100,00</div>
+                    <p class="text-sm text-gray-600 mb-4">ou 3x de €33,33 no cartão</p>
+                    
+                    <a href="#comprar" class="block w-full bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-4 px-6 rounded-lg text-center pulse-animation mb-4">
+                        QUERO EMAGRECER AGORA!
+                    </a>
+                    
+                    <div class="flex items-center justify-center">
+                        <img src="https://via.placeholder.com/150" alt="Pagamento seguro" class="h-8 mr-2">
+                        <span class="text-xs">Compra 100% segura</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://via.placeholder.com/500x500" alt="Moongiro - Emagrecedor Natural" class="rounded-lg shadow-2xl max-w-md w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Por que Moongiro é Diferente?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">100% Natural</h3>
+                    <p class="text-gray-600 text-center">Formulado com ingredientes naturais que aceleram seu metabolismo sem efeitos colaterais.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Resultados Rápidos</h3>
+                    <p class="text-gray-600 text-center">Comece a ver diferenças já na primeira semana de uso contínuo.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mb-4 mx-auto">
+                        <i class="fas fa-heart text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-center mb-3">Saúde em 1º Lugar</h3>
+                    <p class="text-gray-600 text-center">Além de emagrecer, melhora sua disposição, soma e qualidade de vida.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Como Moongiro Funciona?</h2>
+            
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">1. Aceleração Metabólica</h3>
+                    <p class="text-gray-600 mb-4">Moongiro contém ingredientes que aumentam sua taxa metabólica em até 30%, fazendo seu corpo queimar gordura mesmo em repouso.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Ativa a termogênese (queima de gordura)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Reduz o acúmulo de gordura abdominal</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://via.placeholder.com/500x300" alt="Aceleração Metabólica" class="rounded-lg shadow-md w-full">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-12">
+                <div class="md:w-1/2 order-1 md:order-2 mb-8 md:mb-0 md:pl-8">
+                    <h3 class="text-2xl font-semibold mb-4">2. Controle do Apetite</h3>
+                    <p class="text-gray-600 mb-4">Os componentes naturais do Moongiro regulam os hormônios da fome, reduzindo a vontade de comer fora de hora e a compulsão por doces.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Diminui a fome em até 60%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Controla a ansiedade e vontade de beliscar</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2 order-2 md:order-1">
+                    <img src="https://via.placeholder.com/500x300" alt="Controle do Apetite" class="rounded-lg shadow-md w-full">
+                </div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4">3. Detox e Energia</h3>
+                    <p class="text-gray-600 mb-4">Moongiro ajuda a eliminar toxinas que dificultam o emagrecimento, enquanto fornece energia natural para seu dia a dia.</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Elimina retenção de líquidos</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                            <span>Aumenta a disposição e vitalidade</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://via.placeholder.com/500x300" alt="Detox e Energia" class="rounded-lg shadow-md w-full">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Resultados Reais de Pessoas Reais</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="before-after-card mb-4">
+                        <img src="https://via.placeholder.com/400x300" alt="Antes e Depois" class="w-full">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Ana Clara, 32 anos</h3>
+                    <p class="text-gray-600 mb-3">"Perdi 9kg em apenas 4 semanas com Moongiro! Minha autoestima nunca esteve tão alta. Recomendo para todas minhas amigas!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="before-after-card mb-4">
+                        <img src="https://via.placeholder.com/400x300" alt="Antes e Depois" class="w-full">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Carlos Eduardo, 45 anos</h3>
+                    <p class="text-gray-600 mb-3">"Depois de tentar vários produtos, Moongiro foi o único que me fez perder a barriga sem efeitos colaterais. 12kg menos e muita saúde!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-xl">
+                    <div class="before-after-card mb-4">
+                        <img src="https://via.placeholder.com/400x300" alt="Antes e Depois" class="w-full">
+                    </div>
+                    <h3 class="font-semibold text-lg mb-2">Fernanda, 28 anos</h3>
+                    <p class="text-gray-600 mb-3">"Pós-parto foi difícil, mas com Moongiro consegui voltar ao meu peso ideal em 2 meses. Me sinto mais bonita que antes da gravidez!"</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <a href="#comprar" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg">
+                    QUERO TER RESULTADOS TAMBÉM!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="py-16 bg-green-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8 md:p-0 flex flex-col md:flex-row">
+                <div class="md:w-1/3 flex justify-center items-center p-6">
+                    <div class="guarantee-badge bg-white rounded-full p-2 shadow-lg">
+                        <div class="bg-green-100 rounded-full p-8 flex flex-col items-center justify-center">
+                            <i class="fas fa-shield-alt text-green-600 text-5xl mb-2"></i>
+                            <span class="font-bold text-green-800">GARANTIA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-6 md:p-8">
+                    <h2 class="text-2xl font-bold mb-4">Garantia de Satisfação de 30 Dias</h2>
+                    <p class="text-gray-600 mb-4">Estamos tão confiantes nos resultados do Moongiro que oferecemos uma garantia incondicional de 30 dias.</p>
+                    <p class="font-semibold mb-6">Se você não estiver completamente satisfeito(a) com os resultados, devolvemos 100% do seu dinheiro sem questionamentos!</p>
+                    
+                    <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                        <div class="flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-exclamation-circle text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm text-yellow-700">
+                                    <span class="font-bold">Oferta por tempo limitado:</span> Compre hoje e ganhe um e-book com 50 receitas saudáveis para potencializar seus resultados!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-semibold bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span>Como devo tomar o Moongiro?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 bg-white hidden">
+                        <p class="text-gray-600">Recomendamos tomar 2 cápsulas de Moongiro ao dia, uma antes do café da manhã e outra antes do almoço, com um copo de água. Não ultrapasse a dose diária recomendada.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-semibold bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span>Quanto tempo até ver resultados?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 bg-white hidden">
+                        <p class="text-gray-600">A maioria de nossos clientes relatam sentir diferenças já na primeira semana, com redução do apetite e aumento da disposição. Resultados visíveis na balança geralmente aparecem entre 10-15 dias de uso contínuo.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-semibold bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span>Moongiro tem efeitos colaterais?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 bg-white hidden">
+                        <p class="text-gray-600">Moongiro é formulado com ingredientes 100% naturais e não apresenta efeitos colaterais quando usado conforme as instruções. Em casos raros, pessoas sensíveis podem sentir um ligeiro aumento de energia nas primeiras doses.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-semibold bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span>Posso usar Moongiro se tenho problemas de saúde?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 bg-white hidden">
+                        <p class="text-gray-600">Embora Moongiro seja natural, recomendamos que gestantes, lactantes, pessoas com condições médicas específicas ou que fazem uso contínuo de medicamentos consultem um médico antes de iniciar o uso.</p>
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="faq-question w-full px-6 py-4 text-left font-semibold bg-gray-50 hover:bg-gray-100 transition-colors flex justify-between items-center">
+                        <span>Qual o prazo de entrega?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 py-4 bg-white hidden">
+                        <p class="text-gray-600">Enviamos seu pedido em até 24h úteis após a confirmação do pagamento. O prazo de entrega varia de 3 a 10 dias úteis dependendo da sua localização. Para compras acima de €100,00 o frete é grátis para toda Europa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="comprar" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-6">Pronto para Transformar seu Corpo e sua Vida?</h2>
+                <p class="text-xl mb-8">Moongiro é a solução natural que você estava esperando para alcançar o corpo dos seus sonhos sem sacrifícios.</p>
+                
+                <div class="bg-white rounded-lg p-8 text-black max-w-2xl mx-auto">
+                    <h3 class="text-2xl font-bold mb-6">OFERTA EXCLUSIVA POR TEMPO LIMITADO</h3>
+                    
+                    <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                        <div class="mb-4 md:mb-0">
+                            <div class="text-gray-600 line-through text-lg">De €150,00</div>
+                            <div class="text-4xl font-bold text-green-600">€100,00</div>
+                            <div class="text-sm text-gray-600">ou 3x de €33,33 no cartão</div>
+                        </div>
+                        
+                        <div class="bg-red-600 text-white px-4 py-2 rounded-md font-bold">
+                            <div class="text-sm">OFERTA TERMINA EM:</div>
+                            <div id="cta-countdown" class="text-xl">30:00</div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-center justify-center space-x-2 mb-2">
+                            <i class="fas fa-gift text-yellow-500"></i>
+                            <span class="font-semibold">BÔNUS EXCLUSIVO:</span>
+                        </div>
+                        <p class="text-sm text-gray-600">E-book "50 Receitas Queimadoras de Gordura" (valor €47,00) GRÁTIS para compras hoje!</p>
+                    </div>
+                    
+                    <a href="#" class="block w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg text-center text-lg mb-4 pulse-animation">
+                        SIM, QUERO EMAGRECER COM MOONGIRO!
+                    </a>
+                    
+                    <div class="flex items-center justify-center">
+                        <img src="https://via.placeholder.com/150" alt="Pagamento seguro" class="h-8 mr-2">
+                        <div class="text-xs text-left">
+                            <div>Compra 100% segura</div>
+                            <div>Dados protegidos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Moongiro</h3>
+                    <p class="text-sm text-gray-400">O emagrecimento saudável que você merece</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-sm text-gray-400">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <p>© 2023 Moongiro. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6">
+                        <a href="#" class="hover:text-white">Termos de Uso</a>
+                        <a href="#" class="hover:text-white">Política de Privacidade</a>
+                        <a href="#" class="hover:text-white">Contato</a>
+                    </div>
+                </div>
+                <div class="mt-4 text-xs">
+                    <p>Este produto não se destina a diagnosticar, tratar, curar ou prevenir qualquer doença. Os resultados podem variar de pessoa para pessoa.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function startCountdown(elementId, minutes) {
+            let time = minutes * 60;
+            const countdownElement = document.getElementById(elementId);
+            
+            const interval = setInterval(() => {
+                const minutesLeft = Math.floor(time / 60);
+                let secondsLeft = time % 60;
+                
+                secondsLeft = secondsLeft < 10 ? '0' + secondsLeft : secondsLeft;
+                
+                countdownElement.innerHTML = `${minutesLeft}:${secondsLeft}`;
+                time--;
+                
+                if (time < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "OFERTA EXPIRADA!";
+                }
+            }, 1000);
+        }
+        
+        // Start both countdowns
+        startCountdown('countdown', 30);
+        startCountdown('cta-countdown', 30);
+        
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Sticky header effect
+        window.addEventListener('scroll', function() {
+            const stickyBar = document.querySelector('.sticky-bar');
+            if (window.scrollY > 100) {
+                stickyBar.classList.add('shadow-md');
+                stickyBar.classList.add('py-1');
+            } else {
+                stickyBar.classList.remove('shadow-md');
+                stickyBar.classList.remove('py-1');
+            }
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=moongiro/moongirooficial" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
